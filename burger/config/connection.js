@@ -10,12 +10,13 @@ var connection = mysql.createConnection({
     host: host,
     port: port,
     user: user,
-    password: pass
+    password: pass,
+    database: "burgers_db"
   });
   
-  connection.connect(function(err) {
+  connection.connect((err) => {
     if (err) throw err;
-    console.log("Connected!");
+    console.log("Connected to database");
   });
 
 module.exports = connection;
