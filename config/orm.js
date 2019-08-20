@@ -21,7 +21,7 @@ const orm = {
     },
     updateOne: (id, burgorm) => {
         const queryString = "UPDATE burgers SET devoured = true WHERE id = ?";
-        connection.query(queryString,[id], (err,res) => {
+        connection.query(queryString, [id], (err,res) => {
             if (err){
                 throw err;
             }
